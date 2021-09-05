@@ -7,14 +7,10 @@ test('name', () => {
 });
 
 test('name Error', () => {
-  const newGamer = new Character ('', 'Bowman');
-  const result = new Error ('Ошибка. Имя не может быть таким ');
-  expect(newGamer.name).toBe(result);
+  expect(()=> new Character('','Bowman')).toThrowError('Ошибка. Имя не может быть таким');
 })
 test('type Error', () => {
-  const newGamer = new Character ('Ann', 'Man');
-  const result = new Error ('Ошибка. Не верно выбран тип');
-  expect(newGamer.type).toBe(result);
+  expect(()=> new Character('Ann','Man')).toThrowError('Ошибка. Не верно выбран тип');
 })
 
 

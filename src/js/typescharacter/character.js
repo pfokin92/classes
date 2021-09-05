@@ -3,7 +3,7 @@
 export default class Character {
   constructor(name, type) {
     if ((typeof (name) !== 'string') || name.length < 2 || name.length > 10) {
-      throw new Error('Ошибка. Имя не может быть таким ');
+      throw new Error('Ошибка. Имя не может быть таким');
     } else {
       this.name = name;
     }
